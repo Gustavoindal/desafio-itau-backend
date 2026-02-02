@@ -73,16 +73,16 @@ Copiar código
 O repositório contém exemplos de uso via Postman demonstrando:
 
 # Transação adicionada
-![POST200](desafio-itau-backend/itau/docs/postman/Adicionar200.png)
+![POST200](itau/docs/postman/Adicionar200.png)
 
 # Transação com Bad Request devido ao formato imprório do OffDatesetTime
-![POST400](desafio-itau-backend/itau/docs/postman/Adicionar400.png)
+![POST400](ditau/docs/postman/Adicionar400.png)
 
 # Estatísticas executadas
-![Estatísticas](desafio-itau-backend/itau/docs/postman/Estatísticas.png)
+![Estatísticas](itau/docs/postman/Delete.png)
 
 # Delete efetuado com sucesso
-![Delete](desafio-itau-backend/itau/docs/postman/Delete.png)
+![Delete](itau/docs/postman/Estatisticas.png)
 
 
 ---
