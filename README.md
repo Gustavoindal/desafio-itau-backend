@@ -76,7 +76,7 @@ O repositório contém exemplos de uso via Postman demonstrando:
 ![POST200](itau/docs/postman/Adicionar200.png)
 
 # Transação com Bad Request devido ao formato imprório do OffDatesetTime
-![POST400](ditau/docs/postman/Adicionar400.png)
+![POST400](itau/docs/postman/Adicionar400.png)
 
 # Estatísticas executadas
 ![Estatísticas](itau/docs/postman/Delete.png)
