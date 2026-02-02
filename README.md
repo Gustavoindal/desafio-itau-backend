@@ -75,13 +75,13 @@ O repositório contém exemplos de uso via Postman demonstrando:
 # Transação adicionada
 ![POST200](itau/docs/postman/Adicionar200.png)
 
-# Transação com Bad Request devido ao formato imprório do OffDatesetTime
+# Transação com Bad Request devido ao formato impróprio do OffsetDateTime
 ![POST400](itau/docs/postman/Adicionar400.png)
 
-# Estatísticas executadas
+# Delete efetuado com sucesso 
 ![Estatísticas](itau/docs/postman/Delete.png)
 
-# Delete efetuado com sucesso
+# Estatisticas mostradas
 ![Delete](itau/docs/postman/Estatisticas.png)
 
 
