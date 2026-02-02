@@ -72,10 +72,18 @@ Copiar código
 
 O repositório contém exemplos de uso via Postman demonstrando:
 
-- Criação de transações com sucesso
-- Validação retornando *400 Bad Request*
-- Consulta de estatísticas
-- Remoção de transações
+# Transação adicionada
+![POST200](desafio-itau-backend/docs/postman/Adicionar200.png)
+
+# Transação com Bad Request devido ao formato imprório do OffDatesetTime
+![POST400](desafio-itau-backend/docs/postman/Adicionar400.png)
+
+# Estatísticas executadas
+![Estatísticas](desafio-itau-backend/docs/postman/Estatísticas.png)
+
+# Delete efetuado com sucesso
+![Delete](desafio-itau-backend/docs/postman/Delete.png)
+
 
 ---
 
