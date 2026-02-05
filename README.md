@@ -90,32 +90,32 @@ Limpeza das transações
 
 ## Transação criada com sucesso
 
-[!Post201](itau/docs/postman/Post201.png)
+![Post201](itau/docs/postman/Post201.png)
 
 ---
 
 ## Erros de validação
 
-[!Post400negativo](itau/docs/postman/Post400negativo.png)
-[!Post400datafutura](itau/docs/postman/Post400datafutura.png)
+![Post400negativo](itau/docs/postman/Post400negativo.png)
+![Post400datafutura](itau/docs/postman/Post400datafutura.png)
 
 ---
 
 ## Estatísticas calculadas
 
-[!Estatisticas](itau/docs/postman/Estatisticas.png)
+![Estatisticas](itau/docs/postman/Estatisticas.png)
 
 ---
 
 ## Remoção das transações
 
-[!Delete](itau/docs/postman/DeleteTransacao.png)
+![Delete](itau/docs/postman/DeleteTransacao.png)
 
 ---
 
 ## Estatísticas após remoção
 
-[!EstatisticasPosDelete](itau/docs/postman/EstatisticasPosDelete.png)
+![EstatisticasPosDelete](itau/docs/postman/EstatisticasPosDelete.png)
 
 ---
 
