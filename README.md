@@ -1,109 +1,139 @@
-# 💳 Desafio Itaú – API de Transações
+# 💳Desafio Itaú – API de Transações
 
-API REST desenvolvida em *Java com Spring Boot* para cadastro de transações financeiras e cálculo de estatísticas em tempo real, simulando um desafio técnico comum em processos seletivos de backend.
+---
+
+## API REST desenvolvida em Java com Spring Boot para cadastro de transações financeiras e cálculo de estatísticas em tempo real, baseada em um desafio técnico júnior de backend.
+O projeto utiliza armazenamento em memória e tem foco em boas práticas, validações de negócio, tratamento centralizado de erros e organização em camadas.
 
 ---
 
 ## 🚀 Tecnologias utilizadas
 
-- Java 21  
-- Spring Boot  
-- Spring Web  
-- Maven  
-- REST API  
++ Java 21
++ Spring Boot
++ Spring Web
++ Maven
++ REST API
 
 ---
-
+  
 ## 🧠 Arquitetura do projeto
 
 O projeto segue uma arquitetura em camadas, com separação clara de responsabilidades:
-src/main/java/desafio/itau ├── controller   → Endpoints REST ├── service      → Regras de negócio ├── repository   → Armazenamento em memória ├── model        → Entidades do domínio ├── DTO          → Objetos de entrada e saída └── DesafioItauApplication.java
 Copiar código
+
+src/main/java/desafio/itau
+ ├── controller   → Endpoints REST
+ ├── service      → Regras de negócio
+ ├── repository   → Armazenamento em memória
+ ├── model        → Entidades do domínio
+ ├── DTO          → Objetos de entrada e saída
+ ├── exception    → Exceções customizadas e handler global
+ └── DesafioItauApplication.java
 
 ---
 
 ## 📌 Funcionalidades
 
 ### 🔹 Transações
-- Cadastro de transações financeiras
-- Remoção de transações
-- Listagem de todas as transações
+
+Cadastro de transações financeiras
+Remoção de todas as transações
+Listagem das transações registradas
 
 ### 🔹 Estatísticas
-- Contagem de transações
-- Soma total dos valores
-- Média
-- Valor mínimo
-- Valor máximo
 
-As estatísticas são calculadas dinamicamente com base nas transações registradas.
+Contagem de transações
+Soma total dos valores
+Média dos valores
+Valor mínimo
+Valor máximo
+As estatísticas são calculadas dinamicamente com base nas transações válidas registradas.
 
----
+### 🔐 Validações implementadas
 
-## 🔐 Validações implementadas
-
-- Valor da transação não pode ser negativo
-- Data da transação não pode estar no futuro
-- Retorno de *HTTP 400 (Bad Request)* para dados inválidos
+O valor da transação não pode ser negativo
+A data da transação não pode estar no futuro
+A data deve estar dentro da janela válida do desafio
+Regras de negócio lançam exceções customizadas
+Respostas HTTP apropriadas para dados inválidos
 
 ---
 
 ## 🌐 Endpoints
-
-### ➕ Criar transação
-POST /transacoes
+➕ Criar transação
 Copiar código
 
-### 📊 Obter estatísticas
-GET /transacoes/estatisticas
+### POST /transacao
+📊 Obter estatísticas
 Copiar código
 
-### 📋 Listar transações
-GET /transacoes
+### GET /estatistica
+📋 Listar transações
 Copiar código
 
-### ❌ Remover transações
-DELETE /transacoes
+### GET /transacao
+❌ Remover transações
 Copiar código
+
+### DELETE /transacao
 
 ---
 
-## 📸 Exemplos de uso (Postman)
+# 📸 Exemplos de uso (Postman)
 
 O repositório contém exemplos de uso via Postman demonstrando:
+Criação de transação válida
+Rejeição de dados inválidos
+Cálculo de estatísticas
+Limpeza das transações
 
-# Transação adicionada
-![POST200](itau/docs/postman/Adicionar200.png)
+## Transação criada com sucesso
 
-# Transação com Bad Request devido ao formato impróprio do OffsetDateTime
-![POST400](itau/docs/postman/Adicionar400.png)
+[!Post201](itau/docs/postman/Post201.png)
 
-# Delete efetuado com sucesso 
-![Estatísticas](itau/docs/postman/Delete.png)
+---
 
-# Estatisticas mostradas
-![Delete](itau/docs/postman/Estatisticas.png)
+## Erros de validação
 
+[!Post400negativo](itau/docs/postman/Post400negativo.png)
+[!Post400datafutura](itau/docs/postman/Post400datafutura.png)
+
+---
+
+## Estatísticas calculadas
+
+[!Estatisticas](itau/docs/postman/Estatisticas.png)
+
+---
+
+## Remoção das transações
+
+[!Delete](itau/docs/postman/DeleteTransacao.png)
+
+---
+
+## Estatísticas após remoção
+
+[!EstatisticasPosDelete](itau/docs/postman/EstatisticasPosDelete.png)
 
 ---
 
 ## 🔎 Referência do desafio
 
-Este projeto foi desenvolvido com base em um desafio técnico júnior público, utilizado em processos seletivos para backend Java.
+Projeto desenvolvido com base em um desafio técnico júnior público, utilizado em processos seletivos para backend Java.
+Desafio original:
 
-O foco foi aprender boas práticas de arquitetura, validações de negócio, separações de responsabilidades e documentação de endpoints
+https://github.com/rafaellins-itau/desafio-itau-vaga-99-junior�
 
-### Desafio original:
-https://github.com/rafaellins-itau/desafio-itau-vaga-99-junior
+---
 
 ## ▶️ Como executar o projeto
 
-Clone o repositório:
-
-git clone https://github.com/seu-usuario/desafio-itau-backend.git
-Entre no projeto e execute:
 Copiar código
 Bash
+git clone https://github.com/seu-usuario/desafio-itau-backend.git
+cd desafio-itau-backend
 mvn spring-boot:run
 A API estará disponível em:
 Copiar código
@@ -113,16 +143,13 @@ http://localhost:8080
 ---
 
 ## 🎯 Objetivo do projeto
-
-Este projeto tem como objetivo:
 Consolidar fundamentos de Java e Spring Boot
 Praticar arquitetura em camadas
-Trabalhar com validações e regras de negócio
+Implementar validações e exceções de domínio
 Simular um desafio técnico de backend
 
 ---
 
-##👤 Autor
-
+## 👤 Autor
 Gustavo Indalêncio da Silva
 Projeto desenvolvido para estudo e evolução contínua em backend Java.
