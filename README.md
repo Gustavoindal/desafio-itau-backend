@@ -124,7 +124,7 @@ Limpeza das transações
 Projeto desenvolvido com base em um desafio técnico júnior público, utilizado em processos seletivos para backend Java.
 Desafio original:
 
-https://github.com/rafaellins-itau/desafio-itau-vaga-99-junior�
+https://github.com/feltex/desafio-itau-backend
 
 ---
 
